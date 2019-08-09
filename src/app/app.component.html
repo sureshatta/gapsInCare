@@ -1,0 +1,92 @@
+<div class="header col-md-12">
+  <div class="text-center col-md-7 pull-left">
+    <h3 >Gaps in Care Dashboard</h3>
+  </div>
+</div>
+<div class="col-md-12 parent">
+  <div class="col-md-1 padding-right"></div>
+  <div class="col-md-10 content col-padding">
+    <div class="col-md-12 label-text row-padding "><b>METRIX</b> &nbsp; <span
+        class="glyphicon glyphicon-arrow-right"></span></div>
+    <div class="col-md-12 col-padding">
+      <div class="col-md-3  metrix-description">
+        <div class="col-md-12 detail row-padding col-padding text-center"><b>DETAILS</b></div>
+        <div class="col-md-12 primary-head col-padding">Chart For :
+          <b class="col-md-12 col-padding">{{title}}</b></div>
+        <div class="col-md-12 primary-head col-padding row-padding">left Y -axis :
+          <b class="col-md-12 col-padding">Immunization status</b></div>
+        <div class="col-md-12 primary-head col-padding">Right Y -axis :
+          <b class="col-md-12 col-padding">Completion status</b></div>
+        <div class="col-md-12 row-padding change-metrix detail">
+          <div class="col-md-2"></div>
+          <div class="col-md-2"></div>
+
+        </div>
+      </div>
+      <canvas class="col-md-9 bar-chart padding-right" baseChart [datasets]="barChartData" [labels]="barChartLabels"
+        [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"
+        (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+
+  <br>
+<br>
+    <div class="col-md-12 col-padding">
+      <div class="col-md-3  metrix-description">
+        <div class="col-md-12 detail row-padding col-padding text-center"><b>DETAILS</b></div>
+        <div class="col-md-12 primary-head col-padding">Chart For :
+          <b class="col-md-12 col-padding">{{title1}}</b></div>
+        <div class="col-md-12 primary-head col-padding row-padding">left Y -axis :
+          <b class="col-md-12 col-padding">Immunization status</b></div>
+        <div class="col-md-12 primary-head col-padding">Right Y -axis :
+          <b class="col-md-12 col-padding">Completion status</b></div>
+        <div class="col-md-12 row-padding change-metrix detail">
+          <div class="col-md-2"></div>
+          <div class="col-md-2"></div>
+
+        </div>
+      </div>
+      <canvas class="col-md-9 bar-chart padding-right" baseChart [datasets]="barChartData1" [labels]="barChartLabels1"
+        [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"
+        (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <br>
+
+    <div class="col-md-12 col-padding desc-section">
+        <div class="col-md-3 pull-left">
+          <div class="col-md-12 detail row-padding col-padding text-center"><b>View Not Performed  :</b></div>
+        </div>
+        <div class = "col-md-3 pull-left">
+        <select   class = "col-md-12  text-center" [(ngModel)] = "selectValue">
+          <option *ngFor = "let item of selectOptions" [value] = "item.id" >{{item.value}}</option>
+        </select>
+        </div>
+        <div class = "col-md-3 pull-left">
+        <select  class = "col-md-12  text-center" [(ngModel)] = "secCriteria">
+            <option *ngFor = "let item of getSecDropDownVal()"  >{{item}}</option>
+          </select>
+      </div>
+    </div>
+
+      <br>
+
+      <div class="col-md-12 col-padding" *ngIf = "tableData.length > 0">
+          <div class="col-md-2 pull-left">
+          </div>
+          <div  class="col-md-12 pull-left" >
+              <div class = "col-md-12 table-header">
+              <div class="col-md-4  bordered-cell pull-left">ID</div>
+              <div class="col-md-8  bordered-cell pull-left">Name</div>
+              </div>
+              <div class="">
+              <div *ngFor  = "let data of tableData" class = "col-md-12 table-hover">
+              <div class="text-left col-md-4  bordered-cell pull-left">{{data['_id']}}</div>
+              <div class="text-left col-md-8  bordered-cell pull-left">{{data.email}}</div>
+              </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+
+<div class="header col-md-12">
+  </div>

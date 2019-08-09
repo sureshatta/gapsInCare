@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~8.1.0",
     "@angular/platform-browser-dynamic": "~8.1.0",
     "@angular/router": "~8.1.0",
+    "@angular/cli": "7.3.9",
     "@types/chart.js": "^2.7.56",
     "chart.js": "^2.8.0",
     "chartjs-plugin-datalabels": "^0.6.0",

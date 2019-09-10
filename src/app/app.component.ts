@@ -100,7 +100,7 @@ export class AppComponent implements OnInit {
     for (let i = 0; i < this.data[0].data.length; i++) {
       this.unperformed.push(this.data[0].data[i] - this.data[1].data[i]);
     }
-    this.title = 'Children Immunization status';
+    this.title = 'Prediabetics screening for blood glucose levels annually';
     this.barChartData = this.data;
 
     for (let i = 0; i < this.data1[0].data.length; i++) {

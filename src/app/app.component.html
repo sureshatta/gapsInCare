@@ -23,9 +23,11 @@
 
         </div>
       </div>
-      <canvas class="col-md-9 bar-chart padding-right" baseChart [datasets]="barChartData" [labels]="barChartLabels"
+         <canvas class="col-md-9 bar-chart padding-right" baseChart [datasets]="barChartData1" [labels]="barChartLabels1"
         [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"
         (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+
+
     </div>
 
   <br>
@@ -45,7 +47,8 @@
 
         </div>
       </div>
-      <canvas class="col-md-9 bar-chart padding-right" baseChart [datasets]="barChartData1" [labels]="barChartLabels1"
+   
+        <canvas class="col-md-9 bar-chart padding-right" baseChart [datasets]="barChartData" [labels]="barChartLabels"
         [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"
         (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
     </div>

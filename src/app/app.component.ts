@@ -9,8 +9,8 @@ import { ModelPopupComponent } from './model-popup/model-popup.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public selectOptions = [{ id: 'child', value: 'Children' },
-  { id: 'otr', value: 'Members with one or more additional risk factors ' }];
+  public selectOptions = [{ id: 'child', value: 'Male' },
+  { id: 'otr', value: 'Prediabetics screening for blood glucose levels annually ' }];
   public selectValue = 'child';
   public secCriteria = 'Diphtheria, Tetanus and acellular Pertussis';
   public barChartOptions: ChartOptions = {
@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
       'Hepatitis A',
       'Rotavirus',
       'Influenza'];
-  public barChartLabels1: Label[] = ['Children', 'Adolescents'];
+  public barChartLabels1: Label[] = ['Male', 'Female'];
 
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
@@ -140,55 +140,55 @@ export class AppComponent implements OnInit {
         },
         {
           _id: '5d4b1ae03493266b6e98ae79',
-          email: 'John Doe'
+          email: 'Jimmy Carter'
         },
         {
           _id: '5d4b1ae05d2c70f7b9714549',
-          email: 'John Doe'
+          email: 'Stuart McGee'
         },
         {
           _id: '5d4b1ae0bc6d933fc4b440c3',
-          email: 'John Doe'
+          email: 'Andrea Joel'
         },
         {
           _id: '5d4b1ae084485c7495bd2dcf',
-          email: 'John Doe'
+          email: 'Jhon Smith'
         },
         {
           _id: '5d4b1ae0adf6ec946dd4c0da',
-          email: 'John Doe'
+          email: 'Clark Stuart'
         },
         {
           _id: '5d4b1ae043defcf37086739d',
-          email: 'John Doe'
+          email: 'Kim Hann'
         },
         {
           _id: '5d4b1ae0c370815146dea8e1',
-          email: 'John Doe'
+          email: 'Anna John'
         },
         {
           _id: '5d4b1ae0a18c86e610d2e940',
-          email: 'John Doe'
+          email: 'John Stuart'
         }
       ];
     } else {
-      this.secDropDownVal = ['Children', 'Adolescents'];
+      this.secDropDownVal = ['Male', 'Female'];
       this.tableData = [
         {
           _id: '5d4b1ae0adf6ec946dd4c0da',
-          email: 'John Doe'
+          email: 'Smith Doe'
         },
         {
           _id: '5d4b1ae043defcf37086739d',
-          email: 'John Doe'
+          email: 'Scott Kim'
         },
         {
           _id: '5d4b1ae0c370815146dea8e1',
-          email: 'John Doe'
+          email: 'Joel Spolsky'
         },
         {
           _id: '5d4b1ae0a18c86e610d2e940',
-          email: 'John Doe'
+          email: 'Jon Skeety'
         }
       ];
     }

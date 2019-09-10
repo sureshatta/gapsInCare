@@ -9,7 +9,7 @@ import { ModelPopupComponent } from './model-popup/model-popup.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public selectOptions = [{ id: 'child', value: 'Male' },
+  public selectOptions = [{ id: 'child', value: 'Children' },
   { id: 'otr', value: 'Prediabetics screening for blood glucose levels annually ' }];
   public selectValue = 'child';
   public secCriteria = 'Diphtheria, Tetanus and acellular Pertussis';
